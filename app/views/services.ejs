@@ -1,38 +1,104 @@
-<!--301310019- Prabhjot Malhi Singh  Web  Application Development -->
+<%- include('partials/header.ejs') %>
+<%- include('partials/main_nav.ejs') %>
 
+<style>
+  .container {
+      position: relative;
+      width: 100%;
+  }
 
-<%- include ('partials/header.ejs') %>
-<%- include ('partials/main_nav.ejs') %>
-   
+  .jumbotron {
+      background-color: rgba(255, 255, 255, 0.8);
+      margin: 20px;
+      border-radius: 15px;
+      padding: 20px;
+      border: 2px solid #ddd;
+  }
 
-<main class="container" style="background-color: lightgray;">
+  .display-4 {
+      font-family: 'Trebuchet MS';
+  }
+
+  .skill-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+  }
+
+  .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 400px; /* Set the max width for the image */
+      margin: auto; /* Center the container */
+  }
+
+  .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px; /* If you want rounded corners */
+      transition: opacity 0.5s ease;
+  }
+
+  .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: red;
+      overflow: hidden;
+      width: 100%;
+      height: 0;
+      transition: .5s ease;
+  }
+
+  .image-container:hover .overlay {
+      height: 100%;
+      opacity: 1;
+  }
+
+  .text {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      font-family: 'Trebuchet MS';
+  }
+</style>
+
+<main class="container" style="background: url('/Assests/background2.jpeg') no-repeat center center; background-size: cover;">
   <div class="jumbotron">
-    <h1 class="display-4">Welcome to <%= title %> page</h1>
+      <h1 class="display-4"> My Professional Experience</h1>
+      <blockquote>
+        <b>My professional background encompasses pivotal positions and proficiencies, which demonstrate my dedication to achieving high standards, ongoing education, and flexibility in ever-changing work settings.</b>
+      </blockquote>
 
+      <!-- Image container for the Shoppers Drug Mart experience -->
+      <div class="image-container">
+          <img src="/Assests/sdm.jpeg" alt="Shoppers Drug Mart" class="image">
+          <div class="overlay">
+              <div class="text">Shoppers Drug Mart</div>
+          </div>
+      </div>
 
-    <blockquote><b> The services we offer are listed below
-    </b></blockquote>
-    
+      <!-- Work experience list -->
+      <div id="text">
+        <ul>
+          <li>Adhered to Backroom Inventory Management (BIMI) procedures and maintained an organized backroom product area.</li>
+          <li>Conducted daily operations utilizing the PDT and MMS systems.</li>
+          <li>Responds to incoming customer phone calls.</li> 
+        </ul>
+      </div>
 
-    <ul>
-      <li> <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large;" ><b>
-        We Offer in-home services to have a photo taken within your reach. Additonal Fees Apply. </b></p>
-        <img src="/Assests/1.png" style: width="400px"; height="400px" ></li>
-      <li> 
-        <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large;" ><b>
-        We also offer in-venue services to capture the memories to have to enrich within your heart. </b></p>
-        <img src="/Assests/2.png" style: width="400px"; height="400px" ></li>
-    </ul>
-    </div>
+      <blockquote><i><b>The rest of my Academic Experience can be found in my Resume.</b></i></blockquote>
 
-        
+  </div>
+</main>
 
+<%- include('partials/bottom_nav.ejs') %>
+<%- include('partials/footer.ejs') %>
 
-    </main>
-    <!--bottom nav-->
-   
-   
-      <!--script section-->
-      <%- include ('partials/bottom_nav.ejs') %>
-      <%- include ('partials/footer.ejs') %>
-   

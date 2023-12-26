@@ -24,4 +24,11 @@ router.get('/services', function(req, res, next) {
   res.render('services', { title: 'Services' });
 });
 
+// POST route for handling form submission
+router.post('/submit-form', function(req, res, next) {
+  // Handle the form data here. 
+  // For now, it just sends a response back indicating success.
+  res.send('Form submitted successfully');
+});
+
 module.exports = router;

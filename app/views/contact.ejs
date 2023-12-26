@@ -1,11 +1,8 @@
-<!--301310019- Prabhjot Malhi Singh  Web  Application Development -->
-
 <%- include ('partials/header.ejs') %>
 <%- include ('partials/main_nav.ejs') %>
-   
 
-<main class="container" style="background-color: lightgray;">
-  <div class="jumbotron">
+<main class="container" style="background: url('/Assests/background2.jpeg') no-repeat center center; background-size: cover;">
+  <div class="jumbotron" style="background-color: rgba(255, 255, 255, 0.8); margin: 20px; border-radius: 15px; padding: 20px;">
     <h1 class="display-4">Welcome to <%= title %> page</h1>
     <p>Contact Us</p>
 
@@ -16,7 +13,9 @@
     </ul>
 
     <blockquote><b>If you have any other concerns, Kindly leave a message below:</b></blockquote>
-    <form action="mailto:malhiprabhjot36@gmail.com">
+    
+   
+    <form action="/submit-form" method="post">
       <input type="submit" value="Submit" style="float: right">
       <label for="first_name">First Name:</label>
       <input type="text" id="first_name" name="first_name" required><br><br>
@@ -32,19 +31,13 @@
 
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="4" required></textarea><br><br>
+    </form>
+    <p><a href="http://localhost:9090/">Back to Home</a></p>
+  </div>
+</main>
 
-      
-  </form>
-  <p><a href="http://localhost:9090/">Back to Home</a></p>
+<!--bottom nav-->
 
-    </div>
-    </main>
-    
-    <!--bottom nav-->
-    
-   
-   
-      <!--script section-->
-      <%- include ('partials/bottom_nav.ejs') %>
-      <%- include ('partials/footer.ejs') %>
-   
+<!--script section-->
+<%- include ('partials/bottom_nav.ejs') %>
+<%- include ('partials/footer.ejs') %>
